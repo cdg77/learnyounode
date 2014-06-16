@@ -9,14 +9,15 @@ console.log(url);
 http.get(url, function(stream) {
 	stream.setEncoding('utf8');
 
-	stream.pipe("data", function (data) {
+	stream.pipe(process.stdout);
+	// stream.pipe("data", function (data) {
 
-		var write = concat(function(data) {
-		console.log(data.toString());
+	// 	var write = concat(function(data) {
+	// 	console.log(data.toString());
 
-		});
-		stream.pipe(write);
-	});
+	// 	});
+	// 	stream.pipe(write);
+	// });
 
 
 });
