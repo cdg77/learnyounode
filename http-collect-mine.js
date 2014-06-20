@@ -5,7 +5,7 @@ var concat = require('concat-stream');
 var url = process.argv[2];
 
 http.get(url, function(stream) {
-	fs.createWriteStream('stream');
+	// stream.pipe(fs.createWriteStream('stream'));
 	stream.pipe(concat(function (data) { 
 		console.log(data.toString().length);
 		console.log(data.toString()); 
