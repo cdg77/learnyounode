@@ -3,8 +3,9 @@
 var fs = require('fs');
 
 var testFileBuffer = fs.readFileSync(process.argv[2]);
+console.log(testFileBuffer);
 var testFileString = testFileBuffer.toString();
-// console.log(testFileString);
+console.log(testFileString);
 
 var lines = testFileString.split('\n').length - 1;
 
