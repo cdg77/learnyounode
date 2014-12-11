@@ -4,13 +4,12 @@ var http = require('http');
 var fs = require('fs');
 
 var testURL = process.argv[2];
-console.log(testURL);
 
 
 http.get(testURL, function(res) {
   res.setEncoding('utf8');
   res.on('data', function (data) {
-    console.log('BODY: ' + data.toString());
+    console.log(data.toString());
   });
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
